@@ -1,4 +1,4 @@
-#Socially-Aware Navigation via Stochastic Advantage Actor-Critic for Continuous Action Control in POMDPs
+## Socially-Aware Navigation via Stochastic Advantage Actor-Critic for Continuous Action Control in POMDPs
 
 ## Overview
 

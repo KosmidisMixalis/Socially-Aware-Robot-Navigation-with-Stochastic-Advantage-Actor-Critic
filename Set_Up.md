@@ -80,6 +80,10 @@ catkin_make
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
+Or everytime you build the workspace execute
+# Source your workspace
+```source ~/catkin_ws/devel/setup.bash```
+
 
 ---
 

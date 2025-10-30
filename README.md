@@ -27,7 +27,7 @@ Our method builds upon the Ridgeback platform and utilizes a stochastic A2C algo
 - Python 3.8+
 
 
-## 🤖 Included Packages & Dependencies
+## Included Packages & Dependencies
 
 | Package | Source |
 |----------|---------|
@@ -36,9 +36,6 @@ Our method builds upon the Ridgeback platform and utilizes a stochastic A2C algo
 | **ridgeback_related_packages** | Clearpath Robotics : https://github.com/ridgeback|
 
 ---
-
-
-
 
 ## Citation
 

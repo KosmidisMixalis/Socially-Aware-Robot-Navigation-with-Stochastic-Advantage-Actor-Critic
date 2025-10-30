@@ -53,12 +53,6 @@ If you use this repository, please cite our paper:
 
 ---
 
-## License
-
-This work is licensed under the BSD 3-Clause License.  
-See the LICENSE file for details.
-
----
 
 ## Contributing
 

@@ -94,7 +94,5 @@ Contributions are welcome!
 For questions or collaboration opportunities:
 
 - **Michail Kosmidis** – [mkosmidi@pme.duth.gr]  
-- **Laboratory of Robotics & Automation (LRA)** – https://robotics.pme.duth.gr
-
 ---
 

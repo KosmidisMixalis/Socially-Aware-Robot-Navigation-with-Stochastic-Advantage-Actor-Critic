@@ -27,29 +27,6 @@ Our method builds upon the Ridgeback platform and utilizes a stochastic A2C algo
 - Python 3.8+
 
 
-## Usage
-
-### 🗺️ Mapping & Localization Example
-
-Save a map:
-
-    roslaunch ridgeback_navigation gmapping_demo.launch
-    roslaunch ridgeback_viz view_robot.launch config:=gmapping
-    rosrun map_server map_saver -f mymap
-
-Localization:
-
-    roslaunch ridgeback_navigation amcl_demo.launch map_file:=/path/to/mymap.yaml
-    roslaunch ridgeback_viz view_robot.launch config:=localization
-
-Gazebo simulation in inference:
-
-    roslaunch ridgeback_gazebo ridgeback_world.launch
-    roslaunch ridgeback_navigation amcl_demo.launch map_file:=/home/alien/Desktop/catkin_ws/src/Social_Nav_Src/test/mymap.yaml
-    roslaunch ridgeback_viz view_robot.launch config:=localization
-
----
-
 ## 🤖 Included Packages & Dependencies
 
 | Package | Source |

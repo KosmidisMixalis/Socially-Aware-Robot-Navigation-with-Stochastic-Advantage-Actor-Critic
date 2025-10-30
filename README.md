@@ -16,6 +16,10 @@ roslaunch ridgeback_navigation amcl_demo.launch map_file:=/home/alien/Desktop/ca
 roslaunch ridgeback_viz view_robot.launch config:=localization
 
 
+the packages contain the sfm plugin forked by 
+https://github.com/robotics-upo/lightsfm.git
+https://github.com/robotics-upo/gazebo_sfm_plugin.git
+
 ## Authors
 
 - **Michail Kosmidis**

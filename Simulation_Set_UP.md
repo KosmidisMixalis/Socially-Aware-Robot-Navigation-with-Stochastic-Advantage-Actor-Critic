@@ -1,214 +1,153 @@
 # Ridgeback ROS Workspace Setup
 
-## Install Ubuntu 20.04 and ROS Noetic
+## Installation Guide (Ubuntu 20.04 + ROS Noetic)
 
-This guide explains how to set up a ROS workspace for simulating the Ridgeback robot using Ubuntu 20.04 and ROS Noetic.
-
-
-### Prerequisites
-
-Ensure that you have installed Ubuntu 20.04 and ROS Noetic. If not, follow the official ROS installation guide for Ubuntu 20.04.
-### Installing ROS Noetic
-
-Once Ubuntu is installed, follow these steps to install **ROS Noetic** visit the [official Ros Noetic download page](http://wiki.ros.org/noetic/Installation/Ubuntu) , the recommended version of ROS compatible with Ubuntu 20.04.
-
-#### Set Up ROS Repository
-
-1. **Add the ROS Package Repository**:  
-   Run the following commands to add the ROS package repository to your system:
-
-    ```bash
-    sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-    ```
-
-2. **Install `curl`** (if not already installed):
-
-    ```bash
-    sudo apt install curl
-    ```
-
-3. **Add ROS GPG Keys**:
-
-    ```bash
-    curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
-    ```
-
-4. **Update the Package List**:
-
-    ```bash
-    sudo apt update
-    ```
-
-#### Install ROS Noetic
-
-1. **Install the Full Desktop Version of ROS Noetic**:
-
-    ```bash
-    sudo apt install ros-noetic-desktop-full
-    ```
-
-#### Configure Your Environment
-
-1. **Add ROS Setup Script to `.bashrc`**:  
-   This ensures that ROS is automatically sourced in every terminal session.
-
-    ```bash
-    echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
-    source ~/.bashrc
-    ```
-
-    Or go to the bashrc file and add the following lines at the bottom of the file:
-
-   ```bash
-   sudo gedit ~/.bashrc
-   source /opt/ros/noetic/setup.bash
-   ```
-
-#### Install Dependencies for Building Packages
-
-1. **Install Additional Dependencies**:
-
-    ```bash
-    sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
-    ```
-    
-2. **Install rosdep**:
-
-   This will be neccesary for later!
-      
-   ```bash
-   sudo apt install python3-rosdep
-   ```
-    
-
-2. **Initialize `rosdep`** (necessary for package dependency management):
-
-   Don't execute them yet we will need them later!
-   
-   ```bash
-   sudo rosdep init
-   rosdep update
-   ```
+This guide explains how to set up a ROS workspace for simulating the Ridgeback robot on **Ubuntu 20.04 (Focal)** with ROS Noetic.
 
 ---
 
-### Verify Installation
-
-1. **Check ROS Installation**:  
-   Run the following command to verify that ROS has been installed correctly:
-
-    ```bash
-    roscore
-    ```
-
-    If ROS is set up correctly, this command will start the ROS master.
+### 1. Prerequisites  
+- Ubuntu 20.04 (desktop version recommended)  
+- Internet connection for package downloads  
+- Sufficient disk space (ROS + simulation packages can take several GB)  
 
 ---
 
-### Step 1: Create a Catkin Workspace
+### 2. Install ROS Noetic
 
-Follow the instructions in the ROS wiki to [create a catkin workspace](http://wiki.ros.org/catkin/Tutorials/create_a_workspace). 
-
+#### 2.1 Configure Ubuntu repositories  
 ```bash
- source /opt/ros/noetic/setup.bash
-mkdir -p ~/Desktop/catkin_ws/src
- cd ~/Desktop/catkin_ws/
-catkin_make
+sudo apt update
+sudo apt install -y software-properties-common
+sudo add-apt-repository universe
 ```
 
-Source this or put it at the end of ~/.bashrc file
+#### 2.2 Add ROS package repository  
 ```bash
-source /opt/ros/noetic/setup.bash
-source ~/Desktop/catkin_ws/devel/setup.bash
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" \
+  > /etc/apt/sources.list.d/ros-latest.list'
 ```
 
-To apply these changes, either restart the terminal or run:
-
+#### 2.3 Add ROS GPG key  
 ```bash
+sudo apt install -y curl
+curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+```
 
+#### 2.4 Update and install ROS  
+```bash
+sudo apt update
+sudo apt install -y ros-noetic-desktop-full
+```
+
+#### 2.5 Environment setup  
+Add the following line to your `~/.bashrc` file so ROS is sourced automatically:
+```bash
+echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-### Step 2: Clone Necessary Packages
-
-Navigate to the src folder of your catkin workspace:
-
+#### 2.6 Install build dependencies  
 ```bash
-
-cd ~/Desktop/catkin_ws/src/
+sudo apt install -y python3-rosdep python3-rosinstall python3-rosinstall-generator \
+  python3-wstool build-essential
 ```
-
-Then, clone the required packages inside src:
-
-navigation
-realsense_ros_gazebo 
-ridgeback
-ridegeback desktop
-ridgeback simulator
-
-
-### Step 3: Install Packages
-
-Run the following commands to install the packages:
-
+Initialize `rosdep` (only once):
 ```bash
-cd ..
 sudo rosdep init
 rosdep update
+```
+
+---
+
+### 3. Verify ROS installation  
+In a new terminal run:
+```bash
+roscore
+```
+If the ROS master starts without errors, your installation is correct.
+
+---
+
+### 4. Create a Catkin Workspace  
+```bash
+source /opt/ros/noetic/setup.bash
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws
+catkin_make
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
+
+---
+
+### 5. Clone Required Packages  
+Navigate to your workspace `src` folder:
+```bash
+cd ~/catkin_ws/src/
+```
+Clone the necessary repositories, from the links in readme file or see the uploaded workspace:
+
+---
+
+### 6. Install Package Dependencies and Build  
+```bash
+cd ~/catkin_ws
 rosdep install --from-paths src --ignore-src -r -y
 catkin_make
 ```
 
-### Step 4: Start Gazebo Ridgeback Robot Simulation
+---
 
-Launch the Gazebo model:
+### 7. Launch Ridgeback Simulation  
 
+#### 7.1 Start Gazebo world  
 ```bash
-
 roslaunch ridgeback_gazebo ridgeback_world.launch
 ```
 
-Launch the navigation:
-
+#### 7.2 Start navigation demo  
 ```bash
-
 roslaunch ridgeback_navigation odom_navigation_demo.launch
 ```
 
-Visualize the RViz configuration:
-
+#### 7.3 View robot in RViz  
 ```bash
-
 roslaunch ridgeback_viz view_robot.launch config:=navigation
 ```
-in order to control the robot through simulation + rviz
 
-you must either point it in a direction with nav2d 
-or with rqt command in terminal
+---
 
-
-
-Navigating Ridgeback
-
-To get all Navigation related files for Ridgeback, run:
-
-sudo apt-get install ros-noetic-ridgeback-navigation
-
+### 8. Mapping & Localization Example  
+```bash
 roslaunch ridgeback_navigation gmapping_demo.launch
 roslaunch ridgeback_viz view_robot.launch config:=gmapping
 rosrun map_server map_saver -f mymap
-This will create a mymap.yaml and mymap.pgm file in your current directory.
-roslaunch ridgeback_navigation amcl_demo.launch map_file:=/path/to/my/map.yaml
+```
+This produces `mymap.yaml` and `mymap.pgm`.  
+Then localize:
+```bash
+roslaunch ridgeback_navigation amcl_demo.launch map_file:=/path/to/mymap.yaml
 roslaunch ridgeback_viz view_robot.launch config:=localization
+```
 
-Useful Note everytime you change something in src and to re catkin_make first run catkin_make clean
-sudo apt remove $(comm -23 <(apt-mark showmanual | sort) <(gzip -dc /var/log/installer/initial-status.gz | sed 's/^[^ ]* //g' | sort))
+---
 
-In Summary:
-
-This command removes all manually installed packages that weren’t part of the initial installation. This helps in cleaning up packages that may have been manually added later but are no longer needed, leaving your system with just the essential packages that were there at the start.
-
+### 9. Useful Notes  
+- Whenever you modify code in `~/catkin_ws/src/`, rerun `catkin_make` or `catkin_make clean && catkin_make`.  
+- If you ever wish to clean up unused packages, use:
+```bash
 sudo apt autoremove
 sudo apt clean
+```
+*Use with caution* — only if you know what you are removing.
 
+---
 
+### 10. Summary  
+This guide sets up:  
+- Ubuntu 20.04 + ROS Noetic  
+- A working catkin workspace for the Ridgeback robot  
+- Simulation, mapping and localization workflows  
+
+You’re now ready to begin development and experimentation with Ridgeback!

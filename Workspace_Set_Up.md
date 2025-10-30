@@ -151,3 +151,13 @@ This guide sets up:
 - Simulation, mapping and localization workflows  
 
 You’re now ready to begin development and experimentation with Ridgeback!
+
+### 11. Additional Notes
+
+This project uses **TensorFlow**, so it is recommended to enable GPU support following the official guide: [TensorFlow GPU Installation](https://www.tensorflow.org/install/pip).  
+
+The project relies on **ROS packages installed on your system** and **Python libraries managed in a Conda environment**.  
+
+All required Python libraries are listed in the provided `environment.yml` file for easy setup.
+
+

@@ -21,8 +21,8 @@ Our method builds upon the Ridgeback platform and utilizes a stochastic A2C algo
 
 ### Prerequisites
 
-- Ubuntu 20.04 / 22.04  
-- ROS Noetic / ROS2 Humble  
+- Ubuntu 20.04   
+- ROS Noetic 
 - Gazebo 11  
 - Python 3.8+
 

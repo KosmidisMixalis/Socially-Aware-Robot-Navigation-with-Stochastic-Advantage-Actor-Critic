@@ -37,19 +37,6 @@ Our method builds upon the Ridgeback platform and utilizes a stochastic A2C algo
 
 ---
 
-## Citation
-
-If you use this repository, please cite our paper:
-
-    @article{kosmidis2025socially,
-      title={Socially-Aware Navigation via Stochastic Advantage Actor-Critic for Continuous Action Control in POMDPs},
-      author={Kosmidis, Michail and Kansizoglou, Ioannis and Gasteratos, Antonios},
-      year={2025},
-      journal={arXiv preprint arXiv:xxxx.xxxxx}
-    }
-
----
-
 
 ## Contributing
 

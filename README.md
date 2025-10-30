@@ -51,3 +51,4 @@ For questions or collaboration opportunities:
 - **Michail Kosmidis** – [mkosmidi@pme.duth.gr]  
 ---
 
+We are currently preparing a **clean and fully up-to-date setup file** that will allow users to install all required dependencies and packages from scratch.  

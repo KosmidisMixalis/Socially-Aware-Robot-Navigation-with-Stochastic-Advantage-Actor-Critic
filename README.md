@@ -17,15 +17,6 @@ Our method builds upon the Ridgeback platform and utilizes a stochastic A2C algo
 
 ---
 
-## Folder Structure
-
-catkin_ws/
-└── src/
-    └── Social_Nav_Src/
-        ├── train/       # Contains training scripts and datasets
-        └── test/        # Contains testing scripts and evaluation data
-        
-
 > ⚠️ Some files in `catkin_ws/src/ridgeback_simulator/ridgeback_gazebo/Media` and Python scripts may require path replacements.
 
 ---

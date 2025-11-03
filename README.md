@@ -106,6 +106,8 @@ Our method builds upon the Ridgeback platform and utilizes a stochastic A2C algo
 
 ---
 
+ActorCriticTest/Test contains a trained a2c model
+
 ## Contributing
 
 Contributions are welcome! Please submit issues or pull requests for improvements, bug fixes, or new features.

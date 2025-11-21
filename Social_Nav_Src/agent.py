@@ -37,11 +37,8 @@ class ActorCritic:
         
         mu = Concatenate()([linear_mu, angular_mu])  # shape: (None, 2)
 
-        # Trainable log_std (shared for simplicity)
-        #log_std = tf.Variable(initial_value=tf.zeros(self.action_dim), trainable=True, name="log_std")
 
         model = keras.Model(inputs=state_input, outputs=mu)
-        #model.log_std = log_std
         return model
 
     def build_critic(self, state_shape):

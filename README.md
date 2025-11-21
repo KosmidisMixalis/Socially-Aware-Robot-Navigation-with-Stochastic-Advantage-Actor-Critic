@@ -82,4 +82,4 @@ For questions or collaboration opportunities:
 
 ---
 
-> ⚡ We are preparing a clean and fully up-to-date setup file that will allow users to install all required dependencies and packages from scratch.
+> ⚡ We are preparing a clean and fully up-to-date setup, for Ros2.

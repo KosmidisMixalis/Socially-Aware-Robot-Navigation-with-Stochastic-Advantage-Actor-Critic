@@ -298,7 +298,7 @@ def main():
     state_size = (grid_size * grid_size * 3) + 2
     continuous_action_space = 2
     lr_actor, lr_critic = 1e-4, 1e-4
-    gamma, batch_size, episode_steps, episodes = 0.99, 1, 1, 1
+    gamma, batch_size, episode_steps, episodes = 0.99, 128, 150, 12800
 
     agent = ActorCritic(state_size, continuous_action_space, lr_actor, lr_critic)
     Reward_table, actor_loss_ls, critic_loss_ls, mu_ls, std_ls = [], [], [], [], []

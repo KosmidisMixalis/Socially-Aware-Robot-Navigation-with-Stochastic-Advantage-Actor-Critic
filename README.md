@@ -17,7 +17,7 @@ Our method builds upon the Ridgeback platform and utilizes a stochastic A2C algo
 
 > ⚠️ The work in this repository is created for academic research. All rights of external packages are reserved to their original owners as per their licenses. Everything in `Social_Nav_Src` is developed by the authors and is open-source for academic use.
 
-Some files in `catkin_ws/src/ridgeback_simulator/ridgeback_gazebo/Media` and Python scripts may require **path replacements** based on your local setup.
+Some files like `catkin_ws/src/ridgeback_simulator/ridgeback_gazebo/Media` and Python scripts may require **path replacements** based on your local setup.
 
 ---
 

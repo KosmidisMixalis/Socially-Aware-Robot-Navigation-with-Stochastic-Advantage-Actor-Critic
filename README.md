@@ -74,14 +74,6 @@ notices and licenses are retained in their respective folders.
 
 ---
 
-## Contributing
-
-Contributions are welcome! Submit issues or pull requests for improvements, bug fixes, or new features.
-
-> ⚠️ Ensure all packages are under `catkin_ws/src` and check file paths in scripts like training scripts and models in `ridgeback_simulator/ridgeback_gazebo/Media/models/person_standing`.
-
----
-
 ## Contact
 
 For questions or collaboration opportunities:

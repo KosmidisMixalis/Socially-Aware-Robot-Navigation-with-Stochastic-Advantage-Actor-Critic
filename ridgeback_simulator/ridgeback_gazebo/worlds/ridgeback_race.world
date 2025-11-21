@@ -1,0 +1,1099 @@
+
+<sdf version='1.4'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+            <contact>
+              <ode/>
+
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+    </model>
+  
+    <model name='walls'>
+      <pose>-0.98931 -0.647711 0 0 -0 0</pose>
+      <link name='Wall_3'>
+        <collision name='Wall_3_Collision'>
+          <geometry>
+            <box>
+              <size>24 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 1.25 0 -0 0</pose>
+        </collision>
+        <visual name='Wall_3_Visual'>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>24 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>-14.225 0 0 0 -0 1.5708</pose>
+      </link>
+      <link name='Wall_4'>
+        <collision name='Wall_4_Collision'>
+          <geometry>
+            <box>
+              <size>26.75 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 1.25 0 -0 0</pose>
+        </collision>
+        <visual name='Wall_4_Visual'>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>26.75 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>-0.925 11.925 0 0 -0 0</pose>
+      </link>
+      <link name='Wall_5'>
+        <collision name='Wall_5_Collision'>
+          <geometry>
+            <box>
+              <size>2 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 1.25 0 -0 0</pose>
+        </collision>
+        <visual name='Wall_5_Visual'>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>2 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>13.3 11.925 0 0 -0 0</pose>
+      </link>
+      <link name='Wall_6'>
+        <collision name='Wall_6_Collision'>
+          <geometry>
+            <box>
+              <size>24 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 1.25 0 -0 0</pose>
+        </collision>
+        <visual name='Wall_6_Visual'>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>24 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>14.225 0 0 0 -0 -1.5708</pose>
+      </link>
+      <link name='Wall_7'>
+        <collision name='Wall_7_Collision'>
+          <geometry>
+            <box>
+              <size>28.6 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 1.25 0 -0 0</pose>
+        </collision>
+        <visual name='Wall_7_Visual'>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>28.6 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>0 -11.925 0 0 -0 3.14159</pose>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf'>
+      <pose>2.5 -4.0 0 0 0 1.5708 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_1'>
+      <pose>1.8 -4.0 0 0 0 1.5708 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+    
+    <model name='shelf_2'>
+      <pose>1.8 4.5 0 0 0 1.5708 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_3'>
+      <pose>10 2.0 0 0 0 1.5708 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_4'>
+      <pose>2.5 4.5 0 0 0 1.5708 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_5'>
+      <pose>10 6.0 0 0 0 1.5708 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+   
+     <model name='shelf_7'>
+      <pose>-3.2 -3.4 0 0 0 1.5708 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_8'>
+      <pose>-4 2.33 0 0 0 0 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_9'>
+      <pose>-11 -2.8 0 0 0 1.5708 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_10'>
+      <pose>-5 10 0 0 0 0 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_11'>
+      <pose>-1 10 0 0 0 0 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_12'>
+      <pose>2 10 0 0 0 0 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+
+    <model name='shelf_13'>
+      <pose>6 10 0 0 0 0 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_14'>
+      <pose>-5 -11 0 0 0 0 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_15'>
+      <pose>-1.7 -11 0 0 0 0 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_16'>
+      <pose>2 -11 0 0 0 0 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_17'>
+      <pose>6 -11 0 0 0 0 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_18'>
+      <pose>-9 -5.5 0 0 0 0 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_19'>
+      <pose>-9 -1 0 0 0 0 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+    
+
+    <model name='shelf_20'>
+      <pose>-5 -5.5 0 0 0 0 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_21'>
+      <pose>10 -2 0 0 0 1.5708 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_22'>
+      <pose>-7 1 0 0 0 1.5708 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_23'>
+      <pose>-9 -11 0 0 0 0 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_24'>
+      <pose>9.7 10 0 0 0 0 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_25'>
+      <pose>6.5 -4 0 0 0 1.5708 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_26'>
+      <pose>10 -11 0 0 0 0 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+
+    <model name='shelf_27'>
+      <pose>6.5 -0.4 0 0 0 1.5708 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_28'>
+      <pose>6.5 3.4 0 0 0 1.5708 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_29'>
+      <pose>-11 2 0 0 0 1.5708 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+
+    <model name='shelf_30'>
+      <pose>-11 6 0 0 0 1.5708 0</pose>
+      <self_collide>true</self_collide>
+      <!-- BASE_LINK FRAME -->
+      <link name='shelf_base'>
+        <pose>-0.5 0 0 0 0 0</pose>
+        <collision name='shelf_chassi_collision'>
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>3.6 0.6 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='shelf_chassi_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.3 0.3</scale>
+              <uri>meshes/shelf_big_movai.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <static>1</static>
+    </model>
+  
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person</name>
+      <pose>-3 0.5 0 0 0 3.13</pose>
+    </include>
+
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person2</name>
+      <pose>-3 1.7 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person3</name>
+      <pose>3.2 -3.5 0 0 0 -0.95</pose>
+    </include>
+
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person4</name>
+      <pose>5 -0.4 0 0 0 1.17</pose>
+    </include>
+
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person5</name>
+      <pose>3.5 3.6 0 0 0 0.95</pose>
+    </include>
+    
+   
+
+  
+     <actor name="actor1">
+      <pose>3.0 -7.5  0 0 0 0</pose>
+      <skin>
+        <filename>walk.dae</filename>
+        <scale>1.0</scale>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <scale>1.000000</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <plugin name="actor2_plugin" filename="libPedestrianSFMPlugin.so">
+        <velocity>0.3</velocity>
+        <radius>0.1</radius>
+        <animation_factor>5.1</animation_factor>
+        <people_distance>1.0</people_distance>
+        <goal_weight>2.0</goal_weight>
+        <obstacle_weight>60.0</obstacle_weight>
+        <social_weight>5</social_weight>
+        <group_gaze_weight>3.0</group_gaze_weight>
+        <group_coh_weight>2.0</group_coh_weight>
+        <group_rep_weight>1.0</group_rep_weight>
+        <ignore_obstacles>
+          <model>ground_plane</model>
+        </ignore_obstacles>
+        <trajectory>
+          <cyclic>true</cyclic>
+          <waypoint>3.0 -7.5 0</waypoint>
+			    <waypoint>-3 -7.5 0</waypoint>
+        </trajectory>
+      </plugin>
+    </actor>
+
+    
+  </world>
+</sdf>

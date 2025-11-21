@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="cylinder_floor_only">
+    <static>false</static>
+    <link name="link">
+      <pose>0 0 0 0 0 0</pose>
+      
+      <gravity>false</gravity>
+
+
+         
+
+      <collision name="collision">
+        <geometry>
+          <cylinder>
+            <radius>0.35</radius>
+            <length>1.0</length>
+          </cylinder>
+          
+        </geometry>
+       <surface>
+	  <contact>
+	    <collide_bitmask>0x01</collide_bitmask> <!-- Cylinder uses bit 0 -->
+	  </contact>
+	</surface>
+      </collision>
+
+      <inertial>
+        <mass>0.01</mass>
+      </inertial>
+    </link>
+  </model>
+</sdf>
+

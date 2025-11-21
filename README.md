@@ -70,7 +70,7 @@ notices and licenses are retained in their respective folders.
 
 ## Pre-trained Models
 
-- `ActorCriticTest/Test` contains a trained A2C model.
+- `Pretrain_A2C` contains a trained A2C model.
 
 ---
 

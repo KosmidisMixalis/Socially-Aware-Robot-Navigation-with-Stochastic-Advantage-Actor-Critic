@@ -76,7 +76,7 @@ notices and licenses are retained in their respective folders.
 
 ## Contact
 
-For questions or collaboration opportunities:
+For questions
 
 - **Michail Kosmidis** – [mkosmidi@pme.duth.gr](mailto:mkosmidi@pme.duth.gr)
 

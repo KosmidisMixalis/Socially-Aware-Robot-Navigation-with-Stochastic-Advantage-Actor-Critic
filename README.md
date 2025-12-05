@@ -1,4 +1,15 @@
 # Socially-Aware Navigation via Stochastic Advantage Actor-Critic 
+[![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)](https://www.python.org/)
+[![ROS](https://img.shields.io/badge/ROS-Noetic-green?logo=ros)](https://www.ros.org/)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-20.04-orange?logo=ubuntu)](https://ubuntu.com/desktop)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.13.0-FF6F00?logo=tensorflow)](https://www.tensorflow.org/)
+[![Gazebo](https://img.shields.io/badge/Gazebo-11-blue?logo=gazebo)](http://gazebosim.org/)
+[![CUDAToolkit](https://img.shields.io/badge/CUDA-11.8-76B900?logo=nvidia)](https://developer.nvidia.com/cuda-toolkit)
+[![PyTorch](https://img.shields.io/badge/PyTorch-1.13.1-EE4C2C?logo=pytorch)](https://pytorch.org/)
+[![OpenCV](https://img.shields.io/badge/OpenCV-4.10.0-blue?logo=opencv)](https://opencv.org/)
+[![YOLOv4](https://img.shields.io/badge/YOLOv4-4.0-FF7F00?logo=github)](https://github.com/AlexeyAB/darknet)
+[![NumPy](https://img.shields.io/badge/NumPy-1.24.3-blue?logo=numpy)](https://numpy.org/)
+[![Matplotlib](https://img.shields.io/badge/Matplotlib-3.7.5-0073C6?logo=matplotlib)](https://matplotlib.org/)
 
 **Authors:** Michail Kosmidis, Ioannis Kansizoglou, Antonios Gasteratos  
 **Affiliation:** Laboratory of Robotics & Automation (LRA), Department of Production and Management Engineering, Democritus University of Thrace, Xanthi, Greece  

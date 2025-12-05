@@ -7,7 +7,7 @@
 [![CUDAToolkit](https://img.shields.io/badge/CUDA-11.8-76B900?logo=nvidia)](https://developer.nvidia.com/cuda-toolkit)
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.13.1-EE4C2C?logo=pytorch)](https://pytorch.org/)
 [![OpenCV](https://img.shields.io/badge/OpenCV-4.10.0-blue?logo=opencv)](https://opencv.org/)
-[![YOLOv4](https://img.shields.io/badge/YOLOv4-4.0-FF7F00?logo=github)](https://github.com/AlexeyAB/darknet)
+[![Ultralytics](https://img.shields.io/badge/Ultralytics-8.3.3-00B8A3?logo=ultralytics)](https://ultralytics.com/)
 [![NumPy](https://img.shields.io/badge/NumPy-1.24.3-blue?logo=numpy)](https://numpy.org/)
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-3.7.5-0073C6?logo=matplotlib)](https://matplotlib.org/)
 

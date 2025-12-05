@@ -24,7 +24,7 @@ This repository contains the full implementation and resources for the paper:
 **"Socially-Aware Navigation via Stochastic Advantage Actor-Critic for Continuous Action Control in POMDPs"**
 
 The project integrates reinforcement learning, social force modeling, and ROS-based navigation for a mobile robot operating in human-populated environments.  
-Our method builds upon the Ridgeback platform and utilizes a stochastic A2C algorithm to learn continuous action control under partial observability.
+Our method builds on the Ridgeback platform and uses a Monte-Carlo actor–critic algorithm—combining REINFORCE returns with an A2C-style policy update—to learn continuous control under partial observability.
 
 > ⚠️ The work in this repository is created for academic research. All rights of external packages are reserved to their original owners as per their licenses. Everything in `Social_Nav_Src` is developed by the authors and is open-source for academic use.
 

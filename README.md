@@ -19,8 +19,6 @@
 
 ## Overview
 
-This repository contains the full implementation and resources for the paper:
-
 **"Socially-Aware Navigation via Stochastic Advantage Actor-Critic for Continuous Action Control in POMDPs"**
 
 The project integrates reinforcement learning, social force modeling, and ROS-based navigation for a mobile robot operating in human-populated environments.  

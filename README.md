@@ -83,12 +83,4 @@ notices and licenses are retained in their respective folders.
 
 ---
 
-## Contact
-
-For questions
-
-- **Michail Kosmidis** – [mkosmidi@pme.duth.gr](mailto:mkosmidi@pme.duth.gr)
-
----
-
 > ⚡ We are preparing a clean and fully up-to-date setup, for Ros2.
